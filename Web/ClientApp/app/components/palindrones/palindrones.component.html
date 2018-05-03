@@ -1,0 +1,34 @@
+<h1>Palindrones</h1>
+
+<p>Component to enter, validate and view palindrones</p>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 bg-success">
+            <label class="top" for="padrone">
+                Palindrone1:
+            </label>
+            <textarea #pdrone name="padrone" id="padrone"></textarea>
+        </div>
+        <div class="col-sm-6 bg-warning">
+            <!-- (click) passes input value to add() and then clears the input -->
+            <button (click)="add(pdrone.value); pdrone.value=''" class="bottom-right">
+                add
+            </button>
+        </div>
+    </div>
+    <div class="row bg-success">
+        <label class="top" for="padroneval">
+            Validate:
+        </label>
+        <label #pdroneval name="padroneval" id="padroneval"></label>
+    </div>
+</div>
+
+
+<h2>Palindrones</h2>
+<ul class="palindrone-list">
+    <li *ngFor="let palindrone of palindrones">
+        <span class="badge"></span> {{palindrone}}
+    </li>
+</ul>
