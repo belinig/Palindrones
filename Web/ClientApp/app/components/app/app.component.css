@@ -1,6 +1,14 @@
-@media (max-width: 767px) {
-    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
-    .body-content {
-        padding-top: 50px;
+@media (min-width: 768px) {
+    .sidebar-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        height: calc(100vh - 72px);
+        overflow-x: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     }
+}
+
+:host {
+    margin:0;
+    padding:0;
 }

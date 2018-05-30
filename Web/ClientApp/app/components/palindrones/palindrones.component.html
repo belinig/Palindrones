@@ -4,20 +4,23 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-6 bg-success">
-            <label class="top" for="padrone">
-                Palindrone1:
-            </label>
+        <label class="top" for="padrone">
+            Palindrone1:
+        </label>
+    </div>
+    <div class="row">
+        <div id="padronetext" class="col-md-4 col-sm-8">
             <textarea #pdrone name="padrone" id="padrone"></textarea>
         </div>
-        <div class="col-sm-6 bg-warning">
-            <!-- (click) passes input value to add() and then clears the input -->
-            <button (click)="add(pdrone.value); pdrone.value=''" class="bottom-right">
+        <div class="col-md-2 col-sm-2 align-items-start justify-content-start">
+             <!--(click) passes input value to add() and then clears the input--> 
+            <button (click)="add(pdrone.value); pdrone.value=''">
                 add
             </button>
         </div>
+        <div class="col-md-6 col-sm-2"></div>
     </div>
-    <div class="row bg-success">
+    <div class="row">
         <label class="top" for="padroneval">
             Validate:
         </label>
@@ -28,7 +31,7 @@
 
 <h2>Palindrones</h2>
 <ul class="palindrone-list">
-    <li *ngFor="let palindrone of palindrones">
-        <span class="badge"></span> {{palindrone}}
+    <li *ngFor="let palindrone of palindrones;let i = index">
+        {{palindrone}}
     </li>
 </ul>

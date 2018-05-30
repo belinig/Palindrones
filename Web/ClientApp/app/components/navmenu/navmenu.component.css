@@ -19,6 +19,10 @@ li.link-active a:focus {
     z-index: 1;
 }
 
+* {
+    font-size:x-small;
+}
+
 @media (min-width: 768px) {
     /* On small screens, convert the nav menu to a vertical sidebar */
     .main-nav {
@@ -42,7 +46,7 @@ li.link-active a:focus {
     }
     .navbar li {
         float: none;
-        font-size: 15px;
+        font-size: 10px;
         margin: 6px;
     }
     .navbar li a {
